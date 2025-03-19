@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO.Pipes;
+using System.Runtime;
+using System.Threading;
 namespace NttsClassAndObject
 {
     partial class Program
@@ -7,12 +10,12 @@ namespace NttsClassAndObject
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to CLass and Non Primitive Classed");
+
             //Person person = new Person();
             //person.Name = "Suraj Shah";
             ////person.Introduce();
             //Calculator calculator = new Calculator();
             //Console.WriteLine(calculator.Add(1, 23));
-
 
 
             // if we use Static in Class then
@@ -119,34 +122,237 @@ namespace NttsClassAndObject
 
             // Exercises 
             // Question 1
-                    //Console.WriteLine("Enter a Valid Number: ");
-                    //var number = Convert.ToInt32(Console.ReadLine());
-                    //if (number >= 0 && number <= 10)
-                    //{
-                    //    Console.WriteLine("Valid Input");
-                    //}
-                    //else
-                    //{
-                    //    Console.WriteLine("Invalid Input");
-                    //}
+            //Console.WriteLine("Enter a Valid Number: ");
+            //var number = Convert.ToInt32(Console.ReadLine());
+            //if (number >= 0 && number <= 10)
+            //{
+            //    Console.WriteLine("Valid Input");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid Input");
+            //}
             // Question 2
-                    //Console.WriteLine("Enter a Height: ");
-                    //var Heigth = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter a Height: ");
+            //var Heigth = Convert.ToInt32(Console.ReadLine());
 
-                    //Console.WriteLine("Enter a Width: ");
-                    //var Width = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter a Width: ");
+            //var Width = Convert.ToInt32(Console.ReadLine());
 
-                    //if (Heigth == 9 || Width == 16)
-                    //{
-                    //    Console.WriteLine("Landscape");
-                    //}
-                    //else
-                    //{
-                    //    Console.WriteLine("Portrait");
-                    //}
+            //if (Heigth == 9 || Width == 16)
+            //{
+            //    Console.WriteLine("Landscape");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Portrait");
+            //}
             // Question 3
+            //Console.WriteLine("Enter a Speed Limit: ");
+            //var speedLimit = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Enter a speed of car: ");
+            //var speedCar = Convert.ToInt32(Console.ReadLine());
+            //int count = 0;
+            //if (speedCar < speedLimit)
+            //{
+            //    Console.WriteLine("OK");
+            //}
+            //else
+            //{
+            //   var differenceSpeed=  speedCar - speedLimit;
+            //    count = differenceSpeed / 5;
+            //    if(count > 12)
+            //    {
+            //        Console.WriteLine("Your Licence Get Banned");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("DemeritPoints: " + count);
+            //    }
+            //}
+
+            // Iteration
+            //int[] arr = new int[9] {10,20,30,40,50,60,70,80,90};
+            //foreach (int i in arr)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+
+
+            //string name = "suraj,sandeep,shah"; // String with commas
+            //string[] parts = name.Split('.'); // Split by comma
+
+            //// Print each part
+            //Console.WriteLine("Splitting by comma:");
+            //foreach (string part in parts)
+            //{
+            //    Console.WriteLine(part);
+            //}
+
+
+            // Random CLass
+
+            //var random = new Random();
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    Console.WriteLine(random.Next(1, 11));
+            //}
+
+            // Example 1 Loops
+            // int cnt = 0;
+            //for (int i = 1; i <= 100; i++)
+            //{
+            //    if(i %3 == 0)
+            //    {
+            //        cnt++;
+            //    }
+            //}
+            //Console.WriteLine(cnt);
+
+            // Question 2
+            // sum is declare outside 0 becaze every time when we enter  a number then we need to add it not resatrt it
+            //int sum = 0;
+            //while (true)
+            //{
+            //    Console.WriteLine("Enter a Number : ");
+            //    var number = Console.ReadLine();
+            //    if(number.ToLower()== "ok")
+            //    {
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        sum += Convert.ToInt32(number);
+            //    }
+            //    Console.WriteLine(sum);
+
+            //}
+
+
+
+            // Factorial of Number 
+            //Console.WriteLine("Enter a Number: ");
+            //int num = Convert.ToInt32(Console.ReadLine());
+            //int factorial = 1;
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    factorial *= i;   
+            //}
+            //Console.WriteLine("Factorial of number is " + factorial);
+
+                        //int NumberOfChance = 4;
+                        //Random random = new Random();
+                        //int secretNumber = random.Next(1, 11);
+                        //int flag = 0;
+                        //while (NumberOfChance > 0)
+                        //{
+                        //    Console.WriteLine("Enter a Number: ");
+                        //    int num = Convert.ToInt32(Console.ReadLine());
+                        //    if (num == secretNumber)
+                        //    {
+                        //        Console.WriteLine("You Won!!!");
+                        //        flag = 1;
+                        //        break;
+                        //    }
+                        //    else if(num < secretNumber)
+                        //    {
+                        //        Console.WriteLine("guessed Number is too less");
+                        //        NumberOfChance--;
+                        //        Console.WriteLine("Number of Chances Left " + NumberOfChance);
+                        //    }
+                        //    else if (num > secretNumber)
+                        //    {
+
+                        //        Console.WriteLine("guessed Number is too High");
+                        //        NumberOfChance--;
+                        //        Console.WriteLine("Number of Chances Left " + NumberOfChance);
+                        //    }
                     
+                        //}
+                        //if (flag == 0)
+
+                        //{ Console.WriteLine("GAME OVER Wait 2 Sec u will get the Answer of what was the Secrete Number !!!!! hehehe");
+                
+                        //}
+                        //Thread.Sleep(2000);
+                        //Console.WriteLine("Secret number is " + secretNumber);
+
+
+            //5, 3, 8, 1, 4 -> 8
+            //Console.WriteLine("Enter a Number Separated by comma ");
+            //var input = Console.ReadLine();
+            ////Console.WriteLine(input.GetType());
+            //var numbers = input.Split(','); // 1,3,4
+            ////Console.WriteLine(numbers);
+
+            //var max = Convert.ToInt32(numbers[0]); //1
+            //foreach (var num in numbers)
+            //{
+            //    int n = Convert.ToInt32(num);  
+            //    if(n > max)
+            //    {
+            //        max = n;
+            //    }
+            //}
+            //Console.WriteLine("The Maximum Value of these numbers are : "+max);
+
+
+
+            //var array = new int[4, 4] { { 100, 2, 4, 5 }, { 1, 4, 5, 6 }, { 5, 5, 6, 8 }, { 1,5,6,7} };
+            //int element = array[0,0];
+            //Console.WriteLine("Element Present at index 0 is "+element);
+
+            //Jagged Array
+            // Methods -> Length Clear copy IndexOf Reverse Sort
+            // Syntax
+            //var jaggedArray = new int[2][];
+            //var RectanglularArray = new int[2,4];
+
+            // Length
+            //var arr = new[]{1, 2, 3,4,5 };
+            //Console.WriteLine("Length of an Array is "+ arr.Length);
+            //foreach(int i in arr) Console.Write(i +"  ");
+
+            // Copy
+            //
+            //var another = new int[3];
+            //Array.Copy(arr,another,3);
+
+            // clear
+            //Array.Clear(another, 0, 3);
+            //foreach(int i in another) Console.WriteLine(i);
+
+            //   int search=  Array.IndexOf(arr, 5);
+            //Console.WriteLine("Search Index : "+ search);
+
+
+            //var numbers = new[] { 5, 4, 3 };
+            //Array.Sort(numbers);
+            //foreach (int i in numbers) 
+            //    Console.WriteLine(i);
+
+            //var numbers = new[] {1,2, 5, 4, 3 };
+            //Array.Reverse(numbers);
+            //foreach (int i in numbers)
+            //    Console.WriteLine(i);
+
+            // msdn visit
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
+
 
