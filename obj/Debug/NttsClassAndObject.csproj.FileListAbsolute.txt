@@ -1,0 +1,7 @@
+C:\Users\DELL\source\repos\NttsClassAndObject\bin\Debug\NttsClassAndObject.exe.config
+C:\Users\DELL\source\repos\NttsClassAndObject\bin\Debug\NttsClassAndObject.exe
+C:\Users\DELL\source\repos\NttsClassAndObject\bin\Debug\NttsClassAndObject.pdb
+C:\Users\DELL\source\repos\NttsClassAndObject\obj\Debug\NttsClassAndObject.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\NttsClassAndObject\obj\Debug\NttsClassAndObject.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\NttsClassAndObject\obj\Debug\NttsClassAndObject.exe
+C:\Users\DELL\source\repos\NttsClassAndObject\obj\Debug\NttsClassAndObject.pdb
