@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO.Pipes;
 using System.Runtime;
 using System.Threading;
+using System.Collections.Generic;
 namespace NttsClassAndObject
 {
     partial class Program
@@ -242,42 +243,42 @@ namespace NttsClassAndObject
             //}
             //Console.WriteLine("Factorial of number is " + factorial);
 
-                        //int NumberOfChance = 4;
-                        //Random random = new Random();
-                        //int secretNumber = random.Next(1, 11);
-                        //int flag = 0;
-                        //while (NumberOfChance > 0)
-                        //{
-                        //    Console.WriteLine("Enter a Number: ");
-                        //    int num = Convert.ToInt32(Console.ReadLine());
-                        //    if (num == secretNumber)
-                        //    {
-                        //        Console.WriteLine("You Won!!!");
-                        //        flag = 1;
-                        //        break;
-                        //    }
-                        //    else if(num < secretNumber)
-                        //    {
-                        //        Console.WriteLine("guessed Number is too less");
-                        //        NumberOfChance--;
-                        //        Console.WriteLine("Number of Chances Left " + NumberOfChance);
-                        //    }
-                        //    else if (num > secretNumber)
-                        //    {
+            //int NumberOfChance = 4;
+            //Random random = new Random();
+            //int secretNumber = random.Next(1, 11);
+            //int flag = 0;
+            //while (NumberOfChance > 0)
+            //{
+            //    Console.WriteLine("Enter a Number: ");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+            //    if (num == secretNumber)
+            //    {
+            //        Console.WriteLine("You Won!!!");
+            //        flag = 1;
+            //        break;
+            //    }
+            //    else if(num < secretNumber)
+            //    {
+            //        Console.WriteLine("guessed Number is too less");
+            //        NumberOfChance--;
+            //        Console.WriteLine("Number of Chances Left " + NumberOfChance);
+            //    }
+            //    else if (num > secretNumber)
+            //    {
 
-                        //        Console.WriteLine("guessed Number is too High");
-                        //        NumberOfChance--;
-                        //        Console.WriteLine("Number of Chances Left " + NumberOfChance);
-                        //    }
-                    
-                        //}
-                        //if (flag == 0)
+            //        Console.WriteLine("guessed Number is too High");
+            //        NumberOfChance--;
+            //        Console.WriteLine("Number of Chances Left " + NumberOfChance);
+            //    }
 
-                        //{ Console.WriteLine("GAME OVER Wait 2 Sec u will get the Answer of what was the Secrete Number !!!!! hehehe");
-                
-                        //}
-                        //Thread.Sleep(2000);
-                        //Console.WriteLine("Secret number is " + secretNumber);
+            //}
+            //if (flag == 0)
+
+            //{ Console.WriteLine("GAME OVER Wait 2 Sec u will get the Answer of what was the Secrete Number !!!!! hehehe");
+
+            //}
+            //Thread.Sleep(2000);
+            //Console.WriteLine("Secret number is " + secretNumber);
 
 
             //5, 3, 8, 1, 4 -> 8
@@ -339,12 +340,39 @@ namespace NttsClassAndObject
             //    Console.WriteLine(i);
 
             // msdn visit
+            // List
+            var numbers = new List<int>() { 1,2,3,4};
+            //numbers.Add(1);
+            // add done
+            numbers.AddRange(new int[] {5,6,7});
+            //foreach (var item in numbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine("Index at " +  numbers.IndexOf(1));
 
+            //Console.WriteLine("number of elemnets are present" + numbers.Count);
 
+            //foreach (var item in numbers)
+            //{
+            //    if(item == 1)
+            //    {
+            //        numbers.Remove(item);
+            //    }
+            //}
 
-
-
-
+            for(var num = 0; num < numbers.Count; num++)
+            {
+                if (numbers[num] == 1)
+                {
+                    numbers.Remove(numbers[num]);
+                }
+            }
+            foreach (int item in numbers)
+            {
+                Console.WriteLine(item);
+            }
+            //Console.WriteLine(numbers);
 
 
 
